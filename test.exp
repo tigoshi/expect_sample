@@ -8,17 +8,17 @@ set tmp_file "./test.txt"
 send "touch aaaaa\n"
 # expect "touch" {puts "touch detect!!!!"}
 
-spawn touch aaaaa
-spawn ls -l
-expect "aaaaa" {puts "find strings!!!"}
+# spawn touch aaaaa
+# spawn ls -l
+# expect "aaaaa" {puts "find strings!!!"}
 
-spawn find  ./ -type f
-expect "ttttt" {puts "find!!!!"}
+# spawn find  ./ -type f
+# expect "ttttt" {puts "find!!!!"}
 
-spawn sh -c "echo test_txt > ./tmp.txt"
+spawn sh -c "echo pc-kira > ./tmp.txt"
 spawn cat ./tmp.txt
 expect { 
-    "teast_taxt" {puts "hit!!!"}
+    "pc-kira" {puts "hit!!!"}
     default {puts "non-hit!!!"}
 }
 
